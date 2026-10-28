@@ -1,0 +1,14 @@
+start 2026-10-29 01:28:50 CST
+slug normal-map-generator
+name 照片转整套PBR贴图
+kw expand attempt 1 2026-10-29 01:28:50 CST
+kw expand done 2026-10-29 01:32:49 CST
+serp start 2026-10-29 01:32:49 CST
+serp done ec=0 2026-10-29 03:49:56 CST
+report start 2026-10-29 03:49:56 CST
+
+research actual start 2026-10-29 03:50:38 CST
+research end 2026-10-29 04:09:29 CST
+research elapsed seconds 1131
+report end 2026-10-29 04:10:13 CST 用时 20 分钟
+done normal-map-generator 2026-10-29 04:10:13 CST

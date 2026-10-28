@@ -1,0 +1,1341 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>照片转整套PBR贴图-64分 · 完整证据包</title><style>body{margin:0;font-family:-apple-system,"PingFang SC","Noto Sans SC",sans-serif;background:#0f1419;color:#e7ecf3;line-height:1.65}
+.top{position:sticky;top:0;background:#0f1419ee;border-bottom:1px solid #2a3548;padding:8px 16px}.top a{color:#9aa8bc;margin-right:10px;font-size:13px;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:20px}a{color:#5b9fd4}table{border-collapse:collapse;display:block;overflow-x:auto}td,th{border:1px solid #2a3548;padding:4px 8px}
+pre,code{background:#121a26;white-space:pre-wrap}h2.sec{border-top:2px solid #5b9fd4;padding-top:16px;margin-top:40px}</style></head><body><div class="top"><a href="#report">完整报告</a><a href="#serp">serp.md</a><a href="#sop-criteria">sop-criteria.md</a><a href="#sop-v3">sop-v3.md</a><a href="#files">证据文件</a></div><div class="wrap"><section id="report"><h2 class="sec">完整报告</h2><p>这个产品帮助独立游戏开发者和 Blender 爱好者，在把自己拍的墙面、木材、布料用于三维场景时，解决一张照片难以变成去光照、可平铺、可直接导入引擎的整套 PBR 贴图的问题。</p>
+<h2 id="_1">需求判断卡</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① 结论</td>
+<td><strong>做：单独建站，但先用新域名单页验证按次收费，暂不投入完整订阅产品。</strong> 有照片转材质的买家证据，也有可切的无缝化、输出整理问题；完整网页交付的付费与成本仍待验证。<a href="https://superhivemarket.com/products/pbr-texture-material-generator-for-blender/ratings">买家与差评</a></td>
+</tr>
+<tr>
+<td>② 只判一个任务</td>
+<td><strong>谁</strong>：已有材质照片的独立开发者、Blender 爱好者。<strong>输入</strong>：一张近似平面的表面照片。<strong>输出</strong>：去光照的底色 albedo、法线 normal、高度 height、粗糙度 roughness、环境遮蔽 AO，加金属度/ORM 通道打包的可平铺 PNG ZIP。PBR 是供渲染器模拟材质受光的成套贴图。产品一句话：照片进去，一套经过预览的材质文件出来。只判断这个转换任务。</td>
+</tr>
+<tr>
+<td>③ 核心词与首批页面</td>
+<td>首页主词 <strong>photo to pbr</strong>；同一首页承接 <strong>image to pbr、pbr map generator</strong>；<strong>pbr texture generator</strong> 作辅助品类词，<strong>pbr material from photo</strong> 作同页场景段落。先共用一个真实转换页，避免为同义词复制页面。前三词美国月搜分别为 <strong>10、20、20</strong>，均为供应商返回正数。<a href="https://api.pxany.com/v1/keyword-volumes">量源</a>／<a href="evidence/original-serp.json">快照</a></td>
+</tr>
+<tr>
+<td>④ 关键数字</td>
+<td><code>pbr texture generator</code> 美国 <strong>70/月</strong>，但含程序化、文生等混合意图；不全计入本任务。<code>photo to pbr</code> 样本 <strong>8条</strong>，可打开的同类站 normalmap.ai <strong>DR20</strong>；<code>pbr map generator</code> 样本 <strong>9条</strong>，Imglio <strong>DR1</strong>。KD、KGR、精确链接预算、最大对手访问量：<strong>未取得</strong>。normalmap.ai 定价 <strong>$8.90/月起</strong>，只证明有报价。<a href="evidence/serp-final-table.md">SERP最终表</a>／<a href="https://api.pxany.com/v1/ahrefs-domain-rating">Ahrefs接口</a>／<a href="https://normalmap.ai/pricing/">价格</a></td>
+</tr>
+<tr>
+<td>⑤ 付费证据</td>
+<td><strong>类型：购买后评论＋买断价。</strong> Superhive 的照片转 PBR 插件有明确买家叙述，完整版 <strong>$9.99</strong>；但这不等于用户已为“去光照＋整套无缝 ZIP”的网页服务付款，更不等于愿意续订。<a href="https://superhivemarket.com/products/pbr-texture-material-generator-for-blender/ratings">买家页</a></td>
+</tr>
+<tr>
+<td>⑥ 最小版本与经济账</td>
+<td>仅做平面照片上传、去光照、各图层一致的无缝化、旋转灯光预览、ZIP 与引擎预设。我们的售价、GPU 成本/套、失败重跑率、支付后净收入、成本/售价比：<strong>未取得</strong>，先实测后定价。客户端计算不产生逐次 GPU 账单，仍有开发、存储、客服等成本，不能写总成本为零。</td>
+</tr>
+<tr>
+<td>⑦ 凭什么赢</td>
+<td><strong>证明照片细节被保留、换灯后材质仍合理、接缝消失且导入无误，再收钱。</strong> 买家抱怨的无缝化、命名和渲染问题给了切口；“网页、4K、商用、ZIP”本身已不足以形成差异。<a href="https://superhivemarket.com/products/pbr-texture-material-generator-for-blender/ratings">差评</a>／<a href="https://texturemap.app/pbr-map-generator">免费整套工具</a></td>
+</tr>
+<tr>
+<td>⑧ 增长路径</td>
+<td>先照片→整套材质的英文转换词；取得付款后，再做木材/砖墙等同输入输出案例页，随后做引擎导入说明。单独法线图、地形高度图、纯无缝图片另列相邻机会，不替本任务撑搜索量。</td>
+</tr>
+<tr>
+<td>⑨ 最大风险／改判未知</td>
+<td>免费产品已覆盖大量交付功能；专业用户对材质质量敏感；商用模型能否稳定保留原照片尚无实测。若同图比较无法胜过免费方案，停止收费产品开发；若完整网页任务出现付款、可控成本与复用，升级投入。<a href="https://texturemap.app/pbr-map-generator">免费功能</a>／<a href="https://www.reddit.com/r/StableDiffusion/comments/1tto1fl/pbr_material_generation_workflowsnodes_img2img/">用户质量抱怨</a></td>
+</tr>
+<tr>
+<td>⑩ 下一步与验收</td>
+<td>先完成商用模型与同图盲评，再发布可交付单页、提交 GSC；按收录→曝光/排名→真实付款逐级验收。<strong>首付、复用、续费分开记录</strong>，未到节点不买外链；具体天数待顾问按内页生命周期补。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>三维决策：需求存在；当前完整网页切口独立收费待验证；SEO 优先级 P1，小投入验证。</strong> 不能把法线词的大搜索量或 normalmap.ai 的混合业务收入当成这个任务已验证 PMF。现阶段值得验证的是“用户愿意为比免费工具更好的一套材质付钱”，不是再增加一套免费滑杆。</p>
+<h2 id="64100">分数：64/100，仅作筛选支撑</h2>
+<p>原日报和交接卡未提供五项数值原分，不能补造；下表为本次核分。每项满分5，总分＝五项之和÷25×100；<strong>不是 SEO 难度分</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>专员原分</th>
+<th style="text-align: right;">核实后</th>
+<th>关键依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>需求真实</td>
+<td>未找到</td>
+<td style="text-align: right;">4</td>
+<td>用户明确找“已有图片→整套材质”，并抱怨现有节点不全、结果不好；不是只看法线工具推广热度。<a href="https://www.reddit.com/r/StableDiffusion/comments/1tto1fl/pbr_material_generation_workflowsnodes_img2img/">原帖</a></td>
+</tr>
+<tr>
+<td>付费意愿</td>
+<td>未找到</td>
+<td style="text-align: right;">3</td>
+<td>有买家买插件处理自己拍的照片；完整网页方案及续费未证明，PMF 只部分对口。<a href="https://superhivemarket.com/products/pbr-texture-material-generator-for-blender/ratings">购买后评论</a></td>
+</tr>
+<tr>
+<td>好服务</td>
+<td>未找到</td>
+<td style="text-align: right;">2</td>
+<td>材质反光、接缝、引擎表现都影响验收，用户有专业判断；“爱好者”不等于要求低。<a href="https://superhivemarket.com/products/pbr-texture-material-generator-for-blender/ratings">买家反馈</a></td>
+</tr>
+<tr>
+<td>小团队做得动</td>
+<td>未找到</td>
+<td style="text-align: right;">3</td>
+<td>基础算法与可用模型存在；去光照、整套一致性及商用授权仍有组合成本。CHORD 不可直接商用。<a href="https://github.com/Kim2091/PBRify_Remix">PBRify</a>／<a href="https://github.com/ubisoft/ComfyUI-Chord/blob/main/LICENSE">CHORD许可</a></td>
+</tr>
+<tr>
+<td>形态简单</td>
+<td>未找到</td>
+<td style="text-align: right;">4</td>
+<td>上传→预览→下载的网页流程成立；质量调节和引擎预设增加复杂度。<a href="https://texturemap.app/pbr-map-generator">现成网页流程</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">关键词作战表：只列首批词</h2>
+<p>月搜沿用交接批次的美国英语数据，来源为 <a href="https://api.pxany.com/v1/keyword-volumes">PXAny Keyword Planner口径接口</a>，见<a href="evidence/original-serp.json">随附原记录</a>。CPC 为原接口低/高页首出价（USD），<strong>不是实际获客成本，Ads competition 不是 SEO KD</strong>。所有行的12月趋势、KD、KGR均未取得；不套经验阈值打分。优先级表示补证和页面次序，未代表批准扩大投入。</p>
+<table>
+<thead>
+<tr>
+<th>关键词</th>
+<th>市场/语言</th>
+<th>月搜与状态</th>
+<th>12月趋势</th>
+<th>KD/KGR</th>
+<th>CPC低/高</th>
+<th>SERP构成、年轻域名与最弱占位</th>
+<th>意图</th>
+<th>做不做／优先级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>photo to pbr</td>
+<td>US/en</td>
+<td>10／返回正数</td>
+<td>未取得</td>
+<td>未取得</td>
+<td>原字段0/0，非免费点击</td>
+<td>8条：工具4、论坛3、视频1；近18月域名3个。最低DR的 boracity 为1，但本次403；可打开的直接对标为<a href="https://normalmap.ai/">normalmap.ai</a>，DR20</td>
+<td>照片→材质，最贴近本任务</td>
+<td>首页主词；P0补质量和首付，SEO P1</td>
+</tr>
+<tr>
+<td>image to pbr</td>
+<td>US/en</td>
+<td>20／返回正数</td>
+<td>未取得</td>
+<td>未取得</td>
+<td>原字段0/0</td>
+<td>原9条明显跑偏，作废；补查找到<a href="https://labs.xo3d.co.uk/image-to-pbr/">XO3D对应页</a>，但通用搜索不能充当US Google十席；最弱占位未取得</td>
+<td>已有图→材质</td>
+<td>同一首页同义词；P1，先补可靠SERP</td>
+</tr>
+<tr>
+<td>pbr map generator</td>
+<td>US/en</td>
+<td>20／返回正数</td>
+<td>未取得</td>
+<td>未取得</td>
+<td>原字段0/0</td>
+<td>9条：工具4、论坛2、商城1、代码1、视频1；近18月域名3个。<a href="https://imglio.com/tools/image-to-pbr-texture">Imglio内页</a> DR1</td>
+<td>成套图层，部分结果偏软件或文生</td>
+<td>首页辅助词；P1</td>
+</tr>
+<tr>
+<td>pbr texture generator</td>
+<td>US/en</td>
+<td>70／返回正数</td>
+<td>未取得</td>
+<td>未取得</td>
+<td>$1.91/$11.29</td>
+<td>10-29跑偏作废；采用10-28的9条：工具4、论坛1、博客1、商城1、视频1、资产页1；近18月域名2个。<a href="https://proctexture.com/">ProcTexture</a> DR1，但程序化输入不对口</td>
+<td>品类混合词，不全属照片转换</td>
+<td>同页辅助品类词；P2，不抢首页主定位</td>
+</tr>
+<tr>
+<td>pbr material from photo</td>
+<td>US/en</td>
+<td>未返回：旧记0，0/null未区分</td>
+<td>未取得</td>
+<td>未取得</td>
+<td>原字段0/0，报价是否缺值未取得</td>
+<td>8条：工具2、论坛1、视频2、博客2、插件1；近18月域名2个。boracity DR1但403；<a href="https://www.cgverse.com/tools/pbr-gen/">cgverse</a> DR3，未实操</td>
+<td>照片→整套材质，对口</td>
+<td>首页案例段落；P1验证意图、P2扩页</td>
+</tr>
+</tbody>
+</table>
+<p>上表 DR、注册日、逐席 URL 与取样日期统一读取<a href="evidence/serp-final-table.md">最终判定表</a>；DR 源为 <a href="https://api.pxany.com/v1/ahrefs-domain-rating">Ahrefs接口</a>，注册日源为 <a href="https://rdap.org/">RDAP</a>。<strong>全部不足十席</strong>，年轻域名只表示有人进入样本，不代表容易排名。原始跑偏结果不参与竞争判断。</p>
+<p><strong>建站先做哪几个词、对应什么页面：</strong> 按上表顺序，<code>photo to pbr / image to pbr / pbr map generator</code> 共用首页转换器；<code>pbr texture generator</code> 放首页副标题和说明；<code>pbr material from photo</code> 放首页同图案例。先交付一个页面，实有不同搜索意图和曝光后再拆内页。</p>
+<p><strong>本批不做的词：</strong> <code>normal map generator</code>、<code>height map generator</code>、<code>seamless texture generator</code> 及各自 App/software/AI 同义词已调查，但输出各不相同，暂不建设其独立工具；文生材质、图片转3D、材质库、地形生成仅列表于附录，不进主评分。</p>
+<p><strong>补查与缺口：</strong> 补查了跑偏的整套材质、地形、无缝宽词，公开网页能验证真实产品，但未拿到新的国家十席。搜索量重查因 DNS 失败未完成；旧批次记录0的词另有归一化问题，不能宣称供应商明确返回0。详见附录。</p>
+<h2 id="_3">词族分析：纯转换词定首页，宽词不能替它撑站</h2>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>词与页面安排</th>
+<th>研究结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最纯商业转换词</td>
+<td>photo to pbr、image to pbr、pbr map generator → 同一个首页</td>
+<td>产品可以直接完成搜索者任务；量小，不能仅凭这几个词证明独立站规模。<a href="https://labs.xo3d.co.uk/image-to-pbr/">对口工具</a></td>
+</tr>
+<tr>
+<td>品类父词</td>
+<td>pbr texture generator、pbr material generator、ai pbr texture generator</td>
+<td>美国月搜分别70、30、30，存在文生/程序化混合，<strong>不相加、不全计本任务</strong>。<a href="evidence/keyword-full-table.md">量记录</a>／<a href="evidence/serp-final-table.md">可见结果</a></td>
+</tr>
+<tr>
+<td>同任务潜在内页</td>
+<td>wood photo to pbr texture、brick photo to pbr texture、photo to pbr for unreal engine</td>
+<td>旧记录0/null不明，最终按未返回处理；先有真实案例，再判断是否需要独立页面。不用批量空内容拉量。<a href="evidence/keyword-full-table.md">全量词表</a></td>
+</tr>
+<tr>
+<td>相邻词族，仅列机会</td>
+<td>照片→单独法线；照片→单独高度；图片→无缝图片；文字→材质；模型→烘焙贴图</td>
+<td>分别是不同输出或输入；其量、付款和竞争均不贡献本任务评分。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>对标站真实吃流量的页面：未取得出词/流量接口，不能认定。</strong> 只能看到 TextureMap 的 <code>/bump-map-generator</code>、GenPBR 的 <code>/free-tools</code>、Imglio 的 <code>/tools/image-to-pbr-texture</code> 在所给样本出现；这支持“工具内页能被检索”，不证明这些页面贡献多少访问。<a href="evidence/serp-final-table.md">逐席证据</a></p>
+<h2 id="_4">红海处理与替代尾词</h2>
+<p>当前样本<strong>不能认定主词前十被高DR大站占满</strong>：有低DR工具，也有不足十席与跑偏数据。头部宽词仍要调查，但不拿单图层大词作为本产品首页。</p>
+<table>
+<thead>
+<tr>
+<th>被比较的词</th>
+<th style="text-align: right;">美国月搜</th>
+<th>最弱占位／意图问题</th>
+<th>替代词与页面</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>normal map generator</td>
+<td style="text-align: right;">2900／正数</td>
+<td>7条；TextureMap DR7，另有2个论坛和1个下载站；只求法线，不等于整套材质</td>
+<td>photo to pbr，10／正数 → 首页；需求更纯、量更小</td>
+</tr>
+<tr>
+<td>height map generator</td>
+<td style="text-align: right;">1000／正数</td>
+<td>10-29无效；10-28的8条以地形为主，3dtexel DR14页也是LiDAR地形</td>
+<td>pbr map generator，20／正数 → 同一首页</td>
+</tr>
+<tr>
+<td>seamless texture generator</td>
+<td style="text-align: right;">720／正数</td>
+<td>10-29无效；10-28有8条，含文生和素材库；patternweaver DR12，但输出只是无缝图片</td>
+<td>pbr material from photo，未返回 → 同页案例；不承诺量</td>
+</tr>
+<tr>
+<td>pbr texture generator</td>
+<td style="text-align: right;">70／正数</td>
+<td>10-28有9条，最低DR1为程序化工具，输入不一致</td>
+<td>image to pbr，20／正数 → 首页；先补国家SERP</td>
+</tr>
+</tbody>
+</table>
+<p>量与全部席位来源：<a href="evidence/original-serp.json">PXAny原记录</a>、<a href="evidence/initial-serp2.json">10-28备用快照</a>、<a href="evidence/serp-final-table.md">最终表</a>。低DR最低占位并不自动等于“可替代的最弱直接竞品”。</p>
+<h2 id="_5">趋势：宽词稳定线索，不能外推整套转换增长</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>取得情况</th>
+<th>能证明什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Trends 1年、5年</td>
+<td>均未取得；请求未能访问。<a href="https://trends.google.com/trends/explore?date=today%2012-m&amp;geo=US&amp;q=normal%20map%20generator%2Cimage%20to%20pbr">1年入口</a>／<a href="https://trends.google.com/trends/explore?date=today%205-y&amp;geo=US&amp;q=normal%20map%20generator%2Cimage%20to%20pbr">5年入口</a></td>
+<td>不写上升、衰退或季节性结论</td>
+</tr>
+<tr>
+<td>12个月搜索量</td>
+<td>找回初筛保存的美国数据：2025-10至2026-09，normal词2400–2900；height词880–1300。<a href="evidence/initial-trends.json">逐月数据</a>／<a href="https://api.pxany.com/v1/keyword-volumes">供应商接口</a></td>
+<td>只是两个相邻宽词未大幅波动；不是Google Trends，不证明本任务增长</td>
+</tr>
+<tr>
+<td>本任务首批词12月数据</td>
+<td>未取得</td>
+<td>不以相邻宽词的稳定性给主任务加趋势分</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_6">对标站拆解、需求与付费证据</h2>
+<h3 id="normalmapai">对标一：normalmap.ai——功能对口，收入归因不对口</h3>
+<p>其首页提供本地图片生成贴图，付费 AI 生图另有入口；价格页列 Lite <strong>$8.90/月</strong>、Pro <strong>$19.90/月</strong>。这是订阅报价，<strong>不是付费人数或转化率</strong>。首页与价格页对商用范围、隐私及生成次数存在不同表述，不能拿宣传文案推算单位利润。<a href="https://normalmap.ai/">首页</a>／<a href="https://normalmap.ai/pricing/">定价</a>／<a href="https://normalmap.ai/ai-generate/">AI生成页</a></p>
+<p><strong>额外深挖①：流量来源与转化——未取得。</strong> 初筛的“7,430访问/月、34引用域”本次未找到可复核的对应站点明细、统计月份和流量分布，撤出关键数字。搜索索引可见创始人 Indie Hackers 页面标注 <strong>$1K/月收入</strong>，但未审计、收入时间口径未取得，正文还明确收入来自 AI generation，且提到透明PNG需求。它是混合业务创始人自述，不能计入本任务的付费证明，也不能从访问数倒算转化率。<a href="https://www.indiehackers.com/product/normalmap-ai">创始人自述索引页；直开失败</a></p>
+<p>可学的是免费工具承接搜索、付费环节单独展示；不能据此认定“整套PBR订阅”已验证。其全站自然搜索占比、主要出词、客户数、融资和续费率均未取得。</p>
+<h3 id="texturemapapp">对标二：TextureMap.app——免费边界比初筛设想更宽</h3>
+<p><strong>额外深挖②：4K、商用、ZIP都不足以单独收费。</strong> 官方整套工具称无需账号、无分辨率上限、无导出次数限制，支持ZIP和16位高度；主页允许商用，另有无缝化工具。具体性能仍未实操验证。这推翻“免费工具只会做基础法线，付费才能整套/高分辨率”的切法。<a href="https://texturemap.app/pbr-map-generator">整套工具</a>／<a href="https://texturemap.app/">商用说明</a></p>
+<p>但其FAQ也说明粗糙度来自亮度/对比度、金属度来自阈值，结果是推断而非测量；整套页未列出去光照 albedo。因此可研究的差异是<strong>去掉照片光照、保留真实纹理结构、整套图一致平铺、减少导入返工</strong>，尚须同图验证。Materialize 也早已能从单图创建材质并无缝化；旧工具存在不能否决市场，单纯改成网页也不能直接证明优势。<a href="https://texturemap.app/pbr-map-generator">TextureMap算法说明</a>／<a href="https://www.boundingboxsoftware.com/materialize/">Materialize官方</a></p>
+<h3 id="_7">需求原声核验：直接问题少，推广热度不能替代需求</h3>
+<table>
+<thead>
+<tr>
+<th>用户／日期／热度</th>
+<th>原话或核对结果</th>
+<th>支持与边界</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ComfyUI使用者；2026-06-01；索引显示0赞，评论总数未取得</td>
+<td>“generate PBR material from existing image”；抱怨DeepBump结果不满意、CHORD装不上、roughness/metalness/AO节点缺失。<a href="https://www.reddit.com/r/StableDiffusion/comments/1tto1fl/pbr_material_generation_workflowsnodes_img2img/">原帖</a></td>
+<td><strong>直接对口</strong>：整套输出与安装/质量痛点；没说已付费。其称DeepBump只能法线是用户体验，官方还支持高度，不能当产品事实。</td>
+</tr>
+<tr>
+<td>游戏开发者；2026-07-27；0赞、3条回复（搜索索引）</td>
+<td>问树皮等照片怎样生成可平铺法线，回复推荐pbrgen。<a href="https://www.reddit.com/r/GameDevelopment/comments/1v8bzpa/photo_textures_to_normals/">原帖</a></td>
+<td>相邻法线任务；不贡献整套任务付费与搜索量。</td>
+</tr>
+<tr>
+<td>Blender角色制作者；2026-10-07；59赞、18评论（既有Arctic快照）</td>
+<td>黑白条纹转法线效果不达标。<a href="https://www.reddit.com/r/blenderhelp/comments/1wzj8nm/">原帖</a></td>
+<td>相邻的手绘毛发法线问题，<strong>不是照片→整套材质</strong>；从原需求强证据降级。</td>
+</tr>
+<tr>
+<td>ABN作者；2026-06-07 UTC（北京时间6月8日）；176赞、10评论（快照）</td>
+<td>发布Painter内的笔触/底色转法线工具。<a href="https://www.reddit.com/r/Substance3D/comments/1tzjiih/">原帖</a></td>
+<td>是作者推广，输入输出亦不同，排除主评分；与原日报日期差异来自时区。</td>
+</tr>
+</tbody>
+</table>
+<p>本次新拉 Arctic Shift 因 DNS 失败，按方法退回 <code>site:reddit.com</code>，并复核已有导出；未声称重新拉满半年。三个版块原始覆盖与候选排序在附录，热度是采集时快照，不能当当前实时值。</p>
+<h3 id="_8">付费证据：有买家，完整网页方案仍待验证</h3>
+<p>只保留以下三条原话；金额、评级只作其原平台证据，不推算收入或市场规模。</p>
+<ol>
+<li><strong>购买后评论，最贴近。</strong> iZabelle：“One of the most usefull addons I ever bought.” 随后说明自己拍石墙、木门、锈蚀物，再用插件转材质；页面仅显示“over 1 year ago”，精确日期未取得。完整版$9.99，平台要求购买后才能评论；但尚不能证明去光照和所有接缝均已解决。<a href="https://superhivemarket.com/products/pbr-texture-material-generator-for-blender/ratings">买家页</a></li>
+<li><strong>用户自述买断，旁证。</strong> CG Cookie讨论：“Last night, I bought ShaderMap which costs $49”。原页直开失败，本次仅核到索引；购买日期未取得，且ShaderMap还包含笔刷、模型烘焙等功能，不能将全部购买动机归给照片转换。<a href="https://blog.cgcookie.com/forums/reply/reply-to-where-are-katie-tools-2/">用户原页</a>／<a href="https://shadermap.com/buynow/">当前官方买断价</a></li>
+<li><strong>购买后差评，可切缺口。</strong> 同一Superhive页面用户：“the program did not actually include it”，指宣传过的无缝功能；也有人抱怨输出命名混乱、Cycles效果不符预期。作者对Cycles问题回应可调参数解决，因此它是用户反馈，不是已复现缺陷。<a href="https://superhivemarket.com/products/pbr-texture-material-generator-for-blender/ratings">评论页</a></li>
+</ol>
+<p><strong>PMF边界：</strong> 已有人为“自己的照片/纹理→PBR材质、导出与工作流”买插件；当前最严格的“去光照＋一致无缝整套ZIP”的网页首付、复用和续费仍未找到。ShaderMap的$19/$29/$49买断价、normalmap.ai订阅价仅作报价参考，不能单凭售价通过PMF关卡。<a href="https://shadermap.com/buynow/">ShaderMap</a>／<a href="https://normalmap.ai/pricing/">normalmap.ai</a></p>
+<p><strong>旧差评不是当前故障证明。</strong> 插件现商品页已列无缝算法与更新，是否仍有接缝或导入问题要用当前版本复现；不能只凭旧评论宣布竞品缺功能。免费档限制保存贴图，完整版$9.99，说明可研究“实际交付”收费，但不能照搬其桌面插件策略到网页。<a href="https://superhivemarket.com/products/pbr-texture-material-generator-for-blender">当前商品说明</a></p>
+<h2 id="ai">AI 压力测试与开源模型</h2>
+<p><strong>额外深挖③：3D社区有明显反AI声音，但程度无法量化。</strong> <code>Detect AI generated materials</code>作者明确说首个游戏希望避免前台AI素材，担心影响玩家；2026-08-28，17赞、7评论，来自既有Arctic快照。<a href="https://www.reddit.com/r/Substance3D/comments/1w0do7x/">帖子</a> 同期PBRIZE推广帖的回复同时质疑训练来源、劳动替代和实际输出；另有用户在反订阅工具帖中直接批评生成图层质量。<a href="https://www.reddit.com/r/blender/comments/1ubzd6x/after_a_year_of_work_weve_created_a_web_app_that/">PBRIZE讨论</a>／<a href="https://www.reddit.com/r/unity/comments/1tnn4dz/i_got_mass_textures_from_the_need_to_generate_pbr/">质量反馈</a></p>
+<p>这些是定向样本，不能写成“3D用户多数反AI”或阻断整个市场。可交付的应对是区分估计与测量、允许用户自有照片、交代实际模型来源和处理方式；不要以“AI”标签代替对比结果，也不要把帖子中的Steam披露顾虑写成政策结论。</p>
+<p><strong>额外深挖④：已查模型质量与许可；GPU质量/成本实测未完成。</strong> 当前环境无PyTorch和可见NVIDIA工具，未进行模型下载及GPU推理；外部接口还出现DNS失败，不能编造速度、显存或$/套。以下是作者公开能力与限制，均不是本次实测。</p>
+<table>
+<thead>
+<tr>
+<th>方案</th>
+<th>对本任务的适配与公开限制</th>
+<th>商用/成本结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/Kim2091/PBRify_Remix">PBRify_Remix</a></td>
+<td>输入diffuse/albedo，生成normal/roughness/height并放大；非完整去光照链，height默认关闭，作者提醒位移过强需调节</td>
+<td>模型标CC0，可作为候选；自身缺去光照albedo、AO与整套一致无缝，不能拿来直接宣称任务已完成；成本未取得</td>
+</tr>
+<tr>
+<td><a href="https://github.com/HugoTini/DeepBump/blob/master/readme.md">DeepBump</a></td>
+<td>单图生成normal，再生成height/curvature；未提供本任务全部图层，训练代码未公开</td>
+<td>仓库GPL，需按实际集成方式核对义务；不能直接把代码许可当所有权重来源已审清；成本未取得</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ubisoft/ComfyUI-Chord/blob/main/LICENSE">CHORD</a></td>
+<td>单图分解方向对口</td>
+<td>许可证明确Research-Only，禁止商业用途，包括商业服务；<strong>本次不选作商用底座</strong></td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/gvecchio/StableMaterials">StableMaterials</a></td>
+<td>支持图像提示和可平铺输出，但属于条件材质生成；基础输出512×512，作者模型卡仍说明refiner未发布。不应将“参考图生成相似材质”当“忠实提取原照片”</td>
+<td>标OpenRAIL，仍须核对实际权重条款；本次成本未取得，不能用放大尺寸冒充真实高分辨率细节</td>
+</tr>
+<tr>
+<td><a href="https://tiptoehigherz.github.io/Material-Extraction/">MatE</a></td>
+<td>单图加区域mask，矫正透视，输出albedo/normal/roughness/height，研究方向更贴近；项目页仍标代码待发布</td>
+<td>可用代码、权重及商用许可未取得；论文效果不能当可部署产品</td>
+</tr>
+</tbody>
+</table>
+<p>StableMaterials论文公开的速度只是<strong>作者实验</strong>：2K为4.9秒/7.4GB显存，4K为18.6秒/12GB，包含其refiner与特定推理设置；公开权重交付不等于论文完整链，因此不能照抄成我们的服务成本。<a href="https://arxiv.org/html/2406.09293v3">原论文推理章节</a></p>
+<p><strong>模型越强，产品会更好吗？有条件成立。</strong> 材质估计质量会受益，但同样降低竞品复制门槛。3D AI Studio 已公开把通用图像编辑模型放进PBR提取工具，初筛“通用大模型不会输出工程贴图，因此安全”的说法不成立。<a href="https://www.3daistudio.com/Tools/PBRMapGenerator">现有工具</a> 不替ChatGPT未来功能作断言；需要守住的是多图物理一致性、忠实原图、同一变换下的无缝处理与引擎交付，不能只守住ZIP按钮。</p>
+<p>最小同图验证应覆盖砖墙、木纹、织物与反光表面：对照TextureMap/Materialize与候选模型，检查底色残留阴影、正常/高度一致性、跨灯光观感、重复接缝、细节位移和导入结果；记录失败重跑、人工调节与实际GPU计费。<strong>这些为待执行验证，不是已取得结果。</strong> 成本按“实际计算＋重试＋存储/流量＋支付费用＋退款”除以成功交付套数核算，定价后再算成本/售价。</p>
+<h2 id="seo">验收节点：先质量，后SEO，再判断商业成立</h2>
+<table>
+<thead>
+<tr>
+<th>节点</th>
+<th>实际要看什么</th>
+<th>停止/调整条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>发布前</td>
+<td>商用许可可用；同图测试优于免费方案；完整ZIP能导入；单次成本可记录</td>
+<td>模型不能商用、忠实度不够或图层错位，先停止收费产品开发</td>
+</tr>
+<tr>
+<td>D0</td>
+<td>新域名发布可用转换页；提交sitemap与GSC Request Indexing</td>
+<td>这是计划，尚未发布；不预填收录日期</td>
+</tr>
+<tr>
+<td>收录窗口</td>
+<td>GSC实际收录及抓取问题</td>
+<td>天数待顾问按生命周期补；未收录先修技术，不买外链</td>
+</tr>
+<tr>
+<td>出词</td>
+<td>本任务词的曝光、排名、点击及上传/成功导出</td>
+<td>只有法线/地形等相邻流量，不算本任务获客成立</td>
+</tr>
+<tr>
+<td>首付</td>
+<td>用户为该完整交付实际付款；记录售价、成本、退款和购买原因</td>
+<td>若真实使用者只选择免费输出，先查质量与定价，不能报付费转化成功</td>
+</tr>
+<tr>
+<td>复用</td>
+<td>同一付款用户在不同照片/项目再次成功交付</td>
+<td>套餐内再用只算复用，不算第二次付款</td>
+</tr>
+<tr>
+<td>续费/再付</td>
+<td>月订阅等到真实续订周期；按次看第二次独立付款</td>
+<td>未走到周期不下续费结论；只首付不复用，不预设订阅成立</td>
+</tr>
+</tbody>
+</table>
+<p>具体样本量、价格和通过比例尚无项目依据，均待定义；不编“几天收录、几单就PMF”。当前建议是推进一个可交付的验证页面，达到节点再扩大词族和研发投入。</p>
+<h2 id="_9">老站内页验证</h2>
+<p>任务简报列出的RapAI、parkcapi、html-to-url、burning-bridges分别偏说唱视频、停车价格、静态页面发布和热梗视频，没有已核实的PBR能力。<strong>主题不对口，不建议借这些站挂收费材质工具。</strong> 若推进，用不含他人商标的新域名单页；html-to-url能托管静态页也不等于材质用户匹配。此为给定站点背景下的建议，站点实际流量与技术复用能力未取得。</p>
+<h2 id="_10">附录</h2>
+<h3 id="a-serp">A. 页面简报：SERP前三可见页与建议文案</h3>
+<p>这里选<code>normal map generator</code>美国7条样本的前三，只研究其页面做法，不计入整套需求竞争分。Title为所给10-28快照；H1与首屏为本次公开页读取。<a href="evidence/initial-serp1.json">原SERP</a></p>
+<table>
+<thead>
+<tr>
+<th>页面</th>
+<th>Title / H1</th>
+<th>首屏承接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://shadermap.com/">ShaderMap</a></td>
+<td>Title：ShaderMap - Normal Map Generator - Create Rendering and…；H1：ShaderMap</td>
+<td>Windows软件、从纹理或模型生成PBR，下载按钮；不能把模型烘焙用户计入照片任务</td>
+</tr>
+<tr>
+<td><a href="https://community.gamedev.tv/t/free-handy-tool-normal-maps-from-texture-texture-generator/42971">GameDev.tv讨论</a></td>
+<td>Title：Free Handy Tool.. Normal Maps from Texture &amp;…；H1与本次首屏：未取得</td>
+<td>是论坛占位，不能虚构为第三个商业工具站</td>
+</tr>
+<tr>
+<td><a href="https://texturemap.app/bump-map-generator">TextureMap bump页</a></td>
+<td>Title：Bump Map Generator — Image to Bump；H1：Bump Map Generator</td>
+<td>直接上传、参数、PNG下载，另链Full PBR Set；展示相邻内页如何承接搜索</td>
+</tr>
+</tbody>
+</table>
+<p>建议首页Title：<code>Photo to PBR — Seamless Material Maps from Your Image</code>；H1：<code>Turn Your Photo into a PBR Material</code>；H2依次解释保留原图的对比、旋转灯光/平铺预览、各图层与引擎配置、处理方式与收费。以上是研究建议；“去光照/无缝”只有验证后才写成功能承诺。不用未经实测的“几秒”“物理精确”文案。</p>
+<h3 id="b">B. 各市场与搜索量状态</h3>
+<p>原批次共798条“市场×词”、267条核心查询，268次SERP请求；本次重点人工复核10组美国词，其他组<strong>未逐条复核，不计竞争分</strong>。数据出自<a href="evidence/original-serp.json">原批次</a>和<a href="evidence/audit-summary.json">最终审计</a>，不是798个独立需求。</p>
+<table>
+<thead>
+<tr>
+<th>市场/语言</th>
+<th style="text-align: right;">原查询条数</th>
+<th style="text-align: right;">返回正数</th>
+<th style="text-align: right;">原生未返回</th>
+<th style="text-align: right;">旧记0、现改未返回</th>
+<th style="text-align: right;">最终未返回</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>US/en</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td>UK/en</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td>CA/en</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td>AU/en</td>
+<td style="text-align: right;">92</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr>
+<td>DE/de</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">23</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">60</td>
+</tr>
+<tr>
+<td>FR/fr</td>
+<td style="text-align: right;">63</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;">63</td>
+</tr>
+<tr>
+<td>ES/es</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">61</td>
+</tr>
+<tr>
+<td>IT/it</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">61</td>
+</tr>
+<tr>
+<td>NL/nl</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">58</td>
+</tr>
+<tr>
+<td>JP/ja</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">64</td>
+</tr>
+<tr>
+<td>KR/ko</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">61</td>
+</tr>
+</tbody>
+</table>
+<p><strong>状态必须分开：</strong> 最终为正数178条、未返回620条；供应商<strong>显式返回0未能确认</strong>，不是“证实没有零”；未查询0条仅指原批次。原因是旧采集脚本将<code>avgMonthlySearches=null</code>也写成0，455条不能区分显式0和缺值。保留原字段后按缺值处理；本次新增重查失败则单列“未取得”，不覆盖原正数。<a href="evidence/keyword-full-table.md">完整修正表</a>／<a href="evidence/pxany-volume-error.json">接口失败记录</a></p>
+<p>德语<code>PBR-Texturen-Generator</code>、法语<code>générateur de textures PBR</code>、西语<code>generador de texturas PBR</code>、意语<code>generatore di texture PBR</code>、荷语<code>PBR-textuurgenerator</code>、日语<code>PBRテクスチャ生成</code>、韩语<code>PBR 텍스처 생성기</code>及当地software/app/AI写法均已在扩词和原查询覆盖；数值缺失不写“当地无需求”。暂不铺多语言站。每语种完整词与其对应状态均在<a href="evidence/keyword-full-table.md">扩词全表</a>。</p>
+<table>
+<thead>
+<tr>
+<th>宽词（相邻，不加主分）</th>
+<th style="text-align: right;">US</th>
+<th style="text-align: right;">UK</th>
+<th style="text-align: right;">CA</th>
+<th style="text-align: right;">AU</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>normal map generator</td>
+<td style="text-align: right;">2900</td>
+<td style="text-align: right;">880</td>
+<td style="text-align: right;">390</td>
+<td style="text-align: right;">260</td>
+</tr>
+<tr>
+<td>height map generator</td>
+<td style="text-align: right;">1000</td>
+<td style="text-align: right;">320</td>
+<td style="text-align: right;">170</td>
+<td style="text-align: right;">110</td>
+</tr>
+<tr>
+<td>seamless texture generator</td>
+<td style="text-align: right;">720</td>
+<td style="text-align: right;">170</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr>
+<td>photo to pbr（对口参照）</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td>image to pbr（对口参照）</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+</tr>
+</tbody>
+</table>
+<p>以上均为返回正数，源同<a href="evidence/original-serp.json">PXAny记录</a>。核心宽词中的<code>pbr texture tool / software / app</code>以及各语言对应写法都查过SERP；很多旧量为0/null不明，并有通用网页、素材库或无效URL，不能写成低竞争。<code>ai pbr texture generator</code>美国30/月，8条样本混有文生；不全算本任务。<a href="evidence/serp-final-table.md">最终表</a></p>
+<h3 id="c-reddit">C. Reddit方法与痛点统计边界</h3>
+<p>Arctic Shift新请求及间隔后的重试均DNS失败，没有换IP或绕限制；转用站内定向搜索，并读取原批次。原始版块时间范围为UTC：<a href="evidence/reddit-window.json">覆盖明细</a>；数据入口为<a href="https://arctic-shift.photon-reddit.com/api/posts/search">Arctic Shift</a>。</p>
+<table>
+<thead>
+<tr>
+<th>版块</th>
+<th style="text-align: right;">原有帖子数</th>
+<th>UTC覆盖</th>
+<th>限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r/Substance3D</td>
+<td style="text-align: right;">1500</td>
+<td>2026-04-30—10-28</td>
+<td>接近半年；不是本次新拉</td>
+</tr>
+<tr>
+<td>r/blenderhelp</td>
+<td style="text-align: right;">1500</td>
+<td>2026-10-01—10-28</td>
+<td>只覆盖约一个月，不能报半年频次</td>
+</tr>
+<tr>
+<td>r/gamedev</td>
+<td style="text-align: right;">2500</td>
+<td>2026-09-23—10-28</td>
+<td>超大版块部分时间窗，不能报半年频次</td>
+</tr>
+</tbody>
+</table>
+<p>按预设纹理/PBR/法线相关正则，本地分别筛到371、21、10条候选；候选包含作品展示、推广、烘焙等，<strong>不是痛点出现次数</strong>。分别按<a href="evidence/reddit-ranked-score.json">点赞</a>和<a href="evidence/reddit-ranked-num_comments.json">评论</a>排序后，人工核到的5条关键快照中：相邻毛发法线求助1条、法线工具推广1条、整套PBR推广2条、反AI顾虑1条；其中直接求购完整任务0条。补充站内搜索才取得整套节点/质量求助1条和照片转法线求助1条，未建立全社区发生率。帖子与计数来源：<a href="evidence/reddit-selected.json">筛选原文</a>、<a href="https://www.reddit.com/r/StableDiffusion/comments/1tto1fl/pbr_material_generation_workflowsnodes_img2img/">直接求助</a>、<a href="https://www.reddit.com/r/GameDevelopment/comments/1v8bzpa/photo_textures_to_normals/">相邻求助</a>。</p>
+<h3 id="d">D. 数据缺口与修正</h3>
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>最终处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原有height、image to pbr、pbr texture、seamless结果跑偏</td>
+<td>原始保留；对应组作废，能找回10-28正确快照的明确标旧日期，不能冒充10-29复查</td>
+</tr>
+<tr>
+<td>其它国家与未重点审查词的SERP</td>
+<td>仅留原始记录，最终标未逐条复核；不把年轻域名旧标签当最终结论</td>
+</tr>
+<tr>
+<td>455条旧零值</td>
+<td>无法区分显式0/null；改未返回，保留原始值。CPC原字段0也不解读为实际点击免费</td>
+</tr>
+<tr>
+<td>normalmap.ai流量、来源、转化</td>
+<td>未取得；不采用7,430访问/月、34引用域作已核数字；收入自述也不归给本任务</td>
+</tr>
+<tr>
+<td>最大对手访问量、客户数、融资、全站出词/流量来源</td>
+<td>未取得；不从排名、DR或点评数反推</td>
+</tr>
+<tr>
+<td>KD/KGR、精确链接预算、估值、Stripe引荐</td>
+<td>未取得；无对应数据源。KD0–29、KGR&lt;0.25、CPC&lt;$0.1等社群经验值只作“待项目复核”，本次不据此扣分</td>
+</tr>
+<tr>
+<td>Google Trends、本任务逐月量</td>
+<td>未取得；仅附两个相邻宽词已有逐月原记录</td>
+</tr>
+<tr>
+<td>GPU基准、端到端质量、支付成本、我们售价</td>
+<td>未取得；没有做过的实测不写通过</td>
+</tr>
+<tr>
+<td>首付、复用、续费</td>
+<td>我们均未验证；现有买家只支持继续验证，不替代本产品验收</td>
+</tr>
+</tbody>
+</table>
+<h3 id="e">E. 证据文件与相邻机会</h3>
+<p>全量关键词、国家明细：<a href="evidence/keyword-full-table.md">keyword-full-table.md</a>；所有原始席位：<a href="evidence/original-serp.json">original-serp.json</a>；可用于结论的逐席表：<a href="evidence/serp-final-table.md">serp-final-table.md</a>；最终机器判定：<a href="evidence/final-decisions.json">final-decisions.json</a>。正文、更新后的SERP展示和JSON均读取相同最终字段。<a href="evidence/source-cards.md">网页核验摘要</a>、必要快照与失败记录随证据包提供。</p>
+<p>相邻机会只列：单独法线图生成、地形高度图、纯无缝图片、文生PBR、图片转3D、模型贴图烘焙、PBR素材库、通道打包。<strong>不将它们的搜索量、收入、购买评论或竞争情况合并进本任务64分。</strong></p>
+<h3 id="f">F. 用时</h3>
+<p>扩词与原SERP流水线：2026-10-29 01:28:50—03:49:56，Asia/Shanghai，共2小时21分06秒；其中SERP采集01:32:49—03:49:56，共2小时17分07秒。来源：随包timing.txt。这是既有流水线耗时，不代表本次连续人工调查时间。本轮开始与结束及实际跨度在交付前写入同一计时文件。</p>
+<p>本轮调查：2026-10-29 03:50:38 CST—2026-10-29 04:09:29 CST；实际跨度18分51秒（含工具等待），未包含此前扩词/SERP时间。计时来源：<a href="timing.txt">timing.txt</a>。</p></section><section id="serp"><h2 class="sec">serp.md</h2><h1 id="serp">SERP最终复核表</h1>
+<p>与serp.json的final_decision同源。美国样本均不足完整十席；非满额排名结论。10-28备用快照与10-29结果分开标日期。</p>
+<p>DR来源：<a href="https://api.pxany.com/v1/ahrefs-domain-rating">Ahrefs，经PXAny接口</a>；注册日来源：<a href="https://rdap.org/">RDAP</a>；年龄仅观察。</p>
+<h2 id="us-normal-map-generator-2026-10-29">US / normal map generator / 2026-10-29</h2>
+<p>相邻法线任务：工具4、论坛2、下载站1；7条，不能代表整套付费需求</p>
+<p>月搜：2900（返回正数）；近18个月域名：2个（按域名去重；只观察，不评容易程度）。</p>
+<table>
+<thead>
+<tr>
+<th>席位</th>
+<th>URL</th>
+<th>DR</th>
+<th>注册日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>https://shadermap.com/</td>
+<td>33</td>
+<td>2008-01-13</td>
+</tr>
+<tr>
+<td>2</td>
+<td>https://community.gamedev.tv/t/free-handy-tool-normal-maps-from-texture-texture-generator/42971</td>
+<td>61</td>
+<td>2015-04-04</td>
+</tr>
+<tr>
+<td>3</td>
+<td>https://texturemap.app/bump-map-generator</td>
+<td>7</td>
+<td>2025-08-20</td>
+</tr>
+<tr>
+<td>4</td>
+<td>https://www.3daistudio.com/Tools/PBRMapGenerator</td>
+<td>61</td>
+<td>2024-01-21</td>
+</tr>
+<tr>
+<td>5</td>
+<td>https://sourceforge.net/projects/denormgen/</td>
+<td>93</td>
+<td>1999-08-08</td>
+</tr>
+<tr>
+<td>6</td>
+<td>https://discussions.unity.com/t/free-normalmap-generator-online/542437</td>
+<td>91</td>
+<td>1995-08-07</td>
+</tr>
+<tr>
+<td>7</td>
+<td>https://texturewiz.com/</td>
+<td>11</td>
+<td>2025-07-06</td>
+</tr>
+</tbody>
+</table>
+<h2 id="us-height-map-generator-2026-10-28">US / height map generator / 2026-10-28</h2>
+<p>10-29结果跑偏作废；10-28的8条以地形为主，相邻任务，不计主评分</p>
+<p>月搜：1000（返回正数）；近18个月域名：0个（按域名去重；只观察，不评容易程度）。</p>
+<table>
+<thead>
+<tr>
+<th>席位</th>
+<th>URL</th>
+<th>DR</th>
+<th>注册日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>https://play.google.com/store/apps/details?id=com.challangephaseone.heightmapmaker&amp;hl=en_NZ</td>
+<td>100</td>
+<td>1997-09-15</td>
+</tr>
+<tr>
+<td>2</td>
+<td>https://www.youtube.com/watch?v=wgo4r7EFazA</td>
+<td>99</td>
+<td>2005-02-15</td>
+</tr>
+<tr>
+<td>3</td>
+<td>https://azgaar.wordpress.com/2018/02/26/image-converter/</td>
+<td>95</td>
+<td>2000-03-03</td>
+</tr>
+<tr>
+<td>4</td>
+<td>https://barneykgb.itch.io/height-generator</td>
+<td>92</td>
+<td>2011-10-27</td>
+</tr>
+<tr>
+<td>5</td>
+<td>https://3dtexel.com/heightmap-generator/</td>
+<td>14</td>
+<td>2025-02-15</td>
+</tr>
+<tr>
+<td>6</td>
+<td>https://terrain3d.readthedocs.io/en/stable/docs/heightmaps.html</td>
+<td>92</td>
+<td>2014-06-14</td>
+</tr>
+<tr>
+<td>7</td>
+<td>https://ribzix.github.io/</td>
+<td>94</td>
+<td>2013-03-08</td>
+</tr>
+<tr>
+<td>8</td>
+<td>https://www.motionforgepictures.com/height-maps/</td>
+<td>37</td>
+<td>2021-01-21</td>
+</tr>
+</tbody>
+</table>
+<h2 id="us-seamless-texture-generator-2026-10-28">US / seamless texture generator / 2026-10-28</h2>
+<p>10-29结果跑偏作废；10-28的8条为无缝化/纹理库/文生混合，相邻任务</p>
+<p>月搜：720（返回正数）；近18个月域名：1个（按域名去重；只观察，不评容易程度）。</p>
+<table>
+<thead>
+<tr>
+<th>席位</th>
+<th>URL</th>
+<th>DR</th>
+<th>注册日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>https://www.youtube.com/watch?v=I1yO0UlLnC4</td>
+<td>99</td>
+<td>2005-02-15</td>
+</tr>
+<tr>
+<td>2</td>
+<td>https://patternweaver.ai/seamless-texture-generator/</td>
+<td>12</td>
+<td>2026-02-18</td>
+</tr>
+<tr>
+<td>3</td>
+<td>https://architextures.org/textures</td>
+<td>51</td>
+<td>2013-11-25</td>
+</tr>
+<tr>
+<td>4</td>
+<td>https://www.reddit.com/r/StableDiffusion/comments/1ar7s6w/generating_seamless_textures_without_prompts/</td>
+<td>95</td>
+<td>2005-04-29</td>
+</tr>
+<tr>
+<td>5</td>
+<td>https://www.front-materials.com/news/seamless-textures-generator/</td>
+<td>49</td>
+<td>2024-03-21</td>
+</tr>
+<tr>
+<td>6</td>
+<td>https://replicate.com/replicate/seamless-texture</td>
+<td>83</td>
+<td>1998-05-26</td>
+</tr>
+<tr>
+<td>7</td>
+<td>https://www.youtube.com/watch?v=I0Df2y2hG4I</td>
+<td>99</td>
+<td>2005-02-15</td>
+</tr>
+<tr>
+<td>8</td>
+<td>https://dreamina.capcut.com/create/seamless-texture-creator</td>
+<td>87</td>
+<td>1997-03-29</td>
+</tr>
+</tbody>
+</table>
+<h2 id="us-image-to-pbr-2026-10-29">US / image to pbr / 2026-10-29</h2>
+<p>原9条含护肤品/字典/图片搜索，整组不采信；通用搜索补查可见对口页，但非US Google十席，竞争未取得</p>
+<p>月搜：20（返回正数）；近18个月域名：0个（按域名去重；只观察，不评容易程度）。</p>
+<table>
+<thead>
+<tr>
+<th>席位</th>
+<th>URL</th>
+<th>DR</th>
+<th>注册日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>—</td>
+<td>未取得有效国家十席</td>
+<td>未取得</td>
+<td>未取得</td>
+</tr>
+</tbody>
+</table>
+<h2 id="us-photo-to-pbr-2026-10-29">US / photo to pbr / 2026-10-29</h2>
+<p>8条：平台工具3、独立工具1、论坛3、视频1；boracity 403，低DR不等于可对标；normalmap.ai可打开</p>
+<p>月搜：10（返回正数）；近18个月域名：3个（按域名去重；只观察，不评容易程度）。</p>
+<table>
+<thead>
+<tr>
+<th>席位</th>
+<th>URL</th>
+<th>DR</th>
+<th>注册日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>https://devforum.roblox.com/t/making-pbr-materials-from-an-image-using-materialize/1558782</td>
+<td>91</td>
+<td>2004-01-30</td>
+</tr>
+<tr>
+<td>2</td>
+<td>https://www.boracity.com/create/texture</td>
+<td>1</td>
+<td>2025-12-28</td>
+</tr>
+<tr>
+<td>3</td>
+<td>https://normalmap.ai/</td>
+<td>20</td>
+<td>2026-04-13</td>
+</tr>
+<tr>
+<td>4</td>
+<td>https://www.youtube.com/shorts/PzjcEnMSvII</td>
+<td>99</td>
+<td>2005-02-15</td>
+</tr>
+<tr>
+<td>5</td>
+<td>https://www.3daistudio.com/Tools/PBRMapGenerator</td>
+<td>61</td>
+<td>2024-01-21</td>
+</tr>
+<tr>
+<td>6</td>
+<td>https://www.facebook.com/groups/RedshiftRender/posts/2128338150948717/</td>
+<td>100</td>
+<td>1997-03-29</td>
+</tr>
+<tr>
+<td>7</td>
+<td>https://www.reddit.com/r/blender/comments/1enq5ou/i_released_a_free_open_source_webbased_tool_that/</td>
+<td>95</td>
+<td>2005-04-29</td>
+</tr>
+<tr>
+<td>8</td>
+<td>https://aitextured.com/tools/</td>
+<td>43</td>
+<td>2025-08-14</td>
+</tr>
+</tbody>
+</table>
+<h2 id="us-image-to-pbr-converter-2026-10-29">US / image to pbr converter / 2026-10-29</h2>
+<p>7条专门工具/工具内页；非满十席，imglio可打开；量原记0但0/null未区分</p>
+<p>月搜：未返回（旧记0，0/null不明）；近18个月域名：4个（按域名去重；只观察，不评容易程度）。</p>
+<table>
+<thead>
+<tr>
+<th>席位</th>
+<th>URL</th>
+<th>DR</th>
+<th>注册日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>https://aitextured.com/pbr-texture-generator/</td>
+<td>43</td>
+<td>2025-08-14</td>
+</tr>
+<tr>
+<td>2</td>
+<td>https://genpbr.com/generate</td>
+<td>12</td>
+<td>2025-10-09</td>
+</tr>
+<tr>
+<td>3</td>
+<td>https://www.cgverse.com/tools/pbr-gen/</td>
+<td>3</td>
+<td>2019-05-18</td>
+</tr>
+<tr>
+<td>4</td>
+<td>https://www.3daistudio.com/Tools/PBRMapGenerator</td>
+<td>61</td>
+<td>2024-01-21</td>
+</tr>
+<tr>
+<td>5</td>
+<td>https://labs.xo3d.co.uk/image-to-pbr/</td>
+<td>33</td>
+<td>2017-02-09</td>
+</tr>
+<tr>
+<td>6</td>
+<td>https://www.playtex.ai/pbr-map-generator</td>
+<td>8</td>
+<td>2026-01-14</td>
+</tr>
+<tr>
+<td>7</td>
+<td>https://imglio.com/tools/image-to-pbr-texture</td>
+<td>1</td>
+<td>2026-04-17</td>
+</tr>
+</tbody>
+</table>
+<h2 id="us-pbr-texture-generator-2026-10-28">US / pbr texture generator / 2026-10-28</h2>
+<p>10-29结果跑偏作废；10-28共9条，品类混合词，程序化和文生不得计主需求</p>
+<p>月搜：70（返回正数）；近18个月域名：2个（按域名去重；只观察，不评容易程度）。</p>
+<table>
+<thead>
+<tr>
+<th>席位</th>
+<th>URL</th>
+<th>DR</th>
+<th>注册日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>https://www.reddit.com/r/blender/comments/1enq5ou/i_released_a_free_open_source_webbased_tool_that/</td>
+<td>95</td>
+<td>2005-04-29</td>
+</tr>
+<tr>
+<td>2</td>
+<td>https://www.scenario.com/features/generate-textures</td>
+<td>65</td>
+<td>1995-05-02</td>
+</tr>
+<tr>
+<td>3</td>
+<td>https://proctexture.com/</td>
+<td>1</td>
+<td>2026-03-09</td>
+</tr>
+<tr>
+<td>4</td>
+<td>https://www.scenario.com/blog/ai-texture-generation</td>
+<td>65</td>
+<td>1995-05-02</td>
+</tr>
+<tr>
+<td>5</td>
+<td>https://genpbr.com/free-tools</td>
+<td>12</td>
+<td>2025-10-09</td>
+</tr>
+<tr>
+<td>6</td>
+<td>https://superhivemarket.com/products/pbr-texture-material-generator-for-blender/ratings</td>
+<td>76</td>
+<td>2022-08-17</td>
+</tr>
+<tr>
+<td>7</td>
+<td>https://3dtexel.com/pbr-material-generator/</td>
+<td>14</td>
+<td>2025-02-15</td>
+</tr>
+<tr>
+<td>8</td>
+<td>https://www.youtube.com/watch?v=esvxXSicAyM</td>
+<td>99</td>
+<td>2005-02-15</td>
+</tr>
+<tr>
+<td>9</td>
+<td>https://www.blendkit.com/asset-gallery-detail/a01ccb0c-87aa-49c8-a140-769930b7a250/</td>
+<td>58</td>
+<td>2012-10-20</td>
+</tr>
+</tbody>
+</table>
+<h2 id="us-pbr-map-generator-2026-10-29">US / pbr map generator / 2026-10-29</h2>
+<p>9条：工具4、论坛2、插件商城1、代码1、视频1；非满十席；imglio可打开</p>
+<p>月搜：20（返回正数）；近18个月域名：3个（按域名去重；只观察，不评容易程度）。</p>
+<table>
+<thead>
+<tr>
+<th>席位</th>
+<th>URL</th>
+<th>DR</th>
+<th>注册日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>https://devforum.roblox.com/t/genpbr-a-free-browserclient-based-pbr-texture-generator-pbr-tool-suite/3165468</td>
+<td>91</td>
+<td>2004-01-30</td>
+</tr>
+<tr>
+<td>2</td>
+<td>https://superhivemarket.com/products/pbr-texture-material-generator-for-blender</td>
+<td>76</td>
+<td>2022-08-17</td>
+</tr>
+<tr>
+<td>3</td>
+<td>https://www.3dhouseplanner.com/tools/pbr-texture-generator-3d-model.php</td>
+<td>52</td>
+<td>2022-11-26</td>
+</tr>
+<tr>
+<td>4</td>
+<td>https://www.youtube.com/watch?v=DYnvS2zLjuk</td>
+<td>99</td>
+<td>2005-02-15</td>
+</tr>
+<tr>
+<td>5</td>
+<td>https://discussions.unity.com/t/normalmap-ai-free-normal-map-and-pbr-texture-generator/1723365</td>
+<td>91</td>
+<td>1995-08-07</td>
+</tr>
+<tr>
+<td>6</td>
+<td>https://github.com/lovisdotio/fal-texture-pbr-generator</td>
+<td>97</td>
+<td>2007-10-09</td>
+</tr>
+<tr>
+<td>7</td>
+<td>https://polyscann.com/studio</td>
+<td>18</td>
+<td>2025-06-16</td>
+</tr>
+<tr>
+<td>8</td>
+<td>https://genpbr.com/free-tools</td>
+<td>12</td>
+<td>2025-10-09</td>
+</tr>
+<tr>
+<td>9</td>
+<td>https://imglio.com/tools/image-to-pbr-texture</td>
+<td>1</td>
+<td>2026-04-17</td>
+</tr>
+</tbody>
+</table>
+<h2 id="us-ai-pbr-texture-generator-2026-10-29">US / ai pbr texture generator / 2026-10-29</h2>
+<p>8条：工具/平台5、论坛1、视频2；含文生混合意图，不计全部为照片转换需求</p>
+<p>月搜：30（返回正数）；近18个月域名：2个（按域名去重；只观察，不评容易程度）。</p>
+<table>
+<thead>
+<tr>
+<th>席位</th>
+<th>URL</th>
+<th>DR</th>
+<th>注册日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>https://lamron.texxary.com/</td>
+<td>21</td>
+<td>2022-10-08</td>
+</tr>
+<tr>
+<td>2</td>
+<td>https://www.3daistudio.com/blog/best-ai-texture-and-pbr-generators-2026</td>
+<td>61</td>
+<td>2024-01-21</td>
+</tr>
+<tr>
+<td>3</td>
+<td>https://genpbr.com/</td>
+<td>12</td>
+<td>2025-10-09</td>
+</tr>
+<tr>
+<td>4</td>
+<td>https://www.reddit.com/r/StableDiffusion/comments/1ic304r/i_made_a_seamless_pbr_material_generator/</td>
+<td>95</td>
+<td>2005-04-29</td>
+</tr>
+<tr>
+<td>5</td>
+<td>https://studio.tripo3d.ai/workspace/texture</td>
+<td>74</td>
+<td>2023-10-27</td>
+</tr>
+<tr>
+<td>6</td>
+<td>https://www.youtube.com/watch?v=YRnPAdTEqL4</td>
+<td>99</td>
+<td>2005-02-15</td>
+</tr>
+<tr>
+<td>7</td>
+<td>https://www.youtube.com/watch?v=Xczqssz6w9U</td>
+<td>99</td>
+<td>2005-02-15</td>
+</tr>
+<tr>
+<td>8</td>
+<td>https://www.playtex.ai/</td>
+<td>8</td>
+<td>2026-01-14</td>
+</tr>
+</tbody>
+</table>
+<h2 id="us-pbr-material-from-photo-2026-10-29">US / pbr material from photo / 2026-10-29</h2>
+<p>8条：工具2、论坛1、视频2、博客2、插件1；boracity 403，弱站优先参考cgverse DR3（尚未实操）</p>
+<p>月搜：未返回（旧记0，0/null不明）；近18个月域名：2个（按域名去重；只观察，不评容易程度）。</p>
+<table>
+<thead>
+<tr>
+<th>席位</th>
+<th>URL</th>
+<th>DR</th>
+<th>注册日</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>https://www.boracity.com/create/texture</td>
+<td>1</td>
+<td>2025-12-28</td>
+</tr>
+<tr>
+<td>2</td>
+<td>https://www.reddit.com/r/blender/comments/1ssnw09/pbr_map_generator_beta_free_browserbased_tool_for/</td>
+<td>95</td>
+<td>2005-04-29</td>
+</tr>
+<tr>
+<td>3</td>
+<td>https://www.cgverse.com/tools/pbr-gen/</td>
+<td>3</td>
+<td>2019-05-18</td>
+</tr>
+<tr>
+<td>4</td>
+<td>https://www.youtube.com/watch?v=6sz2K1OMkGA</td>
+<td>99</td>
+<td>2005-02-15</td>
+</tr>
+<tr>
+<td>5</td>
+<td>https://blog.chaos.com/ai-material-generator-vray-corona</td>
+<td>79</td>
+<td>1993-09-09</td>
+</tr>
+<tr>
+<td>6</td>
+<td>https://www.youtube.com/watch?v=XDAUw_dSmt8</td>
+<td>99</td>
+<td>2005-02-15</td>
+</tr>
+<tr>
+<td>7</td>
+<td>https://sorceress.games/blog/ai-pbr-texture-generator-one-photo-to-game-ready-textures</td>
+<td>34</td>
+<td>2026-02-10</td>
+</tr>
+<tr>
+<td>8</td>
+<td>https://superhivemarket.com/products/pbrforge--image-to-pbr-material-generator</td>
+<td>76</td>
+<td>2022-08-17</td>
+</tr>
+</tbody>
+</table>
+<p>全量关键词见 <a href="evidence/keyword-full-table.md">keyword-full-table.md</a>。</p></section><section id="sop-criteria"><h2 class="sec">sop-criteria.md</h2><p>【对齐需求发掘专员的筛选标准——这是本次调查的核心依据】
+其打分 5 项（各 1–5）：①需求真实 ②付费意愿 ③好服务（用户非专业、要求不高；不限 B 端，C 端也可以，B 端小老板只是加分；专业挑剔或出错要担大责任的扣分）④小团队做得动 ⑤形态简单（表单类）；①或②&lt;3 不推荐。原则：AI 时代赋能（AI 越强产品越好，用户不会因有 AI 就不用）；门槛：对标产品已验证 PMF——且 PMF 必须对得上<strong>当前切口</strong>，大品类有人付费不能直接证明这个小功能有人另付钱。
+初步报告须先钉死：谁、输入、输出、单一用户任务；相邻机会拆开，不混进同一条五项打分。</p>
+<p>你的任务是逐项核实/推翻它给的分数和证据，而不是另起一套标准：
+- 关卡1 核①：逐页打开原帖核对原话和日期（近半年优先），给出你核实后的分数。
+- 关卡2 核②+PMF：官网核实竞品价格、客户数、融资、流量；"有成熟对标产品在收钱"是通过信号，不是否决理由——但必须是当前切口的对标，不是相邻大品类。
+- 关卡3 核③④⑤+切入可行性：不要因为"已有竞品/低价竞品"就止损。只在以下情况止损：免费方案已足够好且用户满意、或头部产品价格已低到小团队无利可图、或差评里找不到任何可切入缺口、或研发/合规负担超出小团队。要明确写出小团队可切的缝隙及证据。
+- 关卡4 市场体量，关卡5 核"AI 时代赋能"是否成立。
+报告开头列一张表：5 项"专员原分 / 核实后分 / 关键证据"；首屏另给三维决策（需求／独立收费／SEO 优先级），总分可放附录。</p></section><section id="sop-v3"><h2 class="sec">sop-v3.md</h2><p>【入口铁律】新赛道必须先有需求发掘专员的初步报告与五项打分，再进入本 SOP 深挖。用户口头点题也先转需求发掘专员，禁止未经初步直接扩词/SERP/写报告。</p>
+<p>你是赛道深度调查员。需求来源报告：<strong>SRC</strong>。中文，精炼。每个数据附来源链接，查不到写"未找到"，严禁编造。
+核心原则：有竞品不是否决理由。竞品赚钱多说明市场被验证，做老二也可以。我们主打 SEO。
+团队在中国做出海：只做能远程成交的软件/SaaS 获客，不做必须本地履约的服务需求。</p>
+<p>【先钉死研究对象】报告开头必须固定：谁、输入是什么、输出是什么、本次只判断哪一个用户任务。
+- 相邻机会（相近但输入/输出不同）只列表，不贡献搜索量、付费证明或竞争评分。
+- 例：播客转文字 ≠ 已有文字稿→发布素材 ≠ 播客内容搜索，必须拆开。
+- 第一行一句话定位仍要写："这个产品帮助【什么人】，在【什么场景】下，解决【什么问题】。"标题用直白话，术语首次出现要解释。</p>
+<p>【第一步：核实赛道】确认需求真假（专员数据、原帖、竞品价格/客户数、Reddit Arctic Shift）。只有需求假或无人付费才停。用户原声要写清：什么用户、原话、抱怨的是哪一步、是否提过现用工具和付费。</p>
+<p>【第二步：调查关键词】
+1. <strong>按用户任务覆盖，不硬凑数量</strong>：先围绕已明确的用户任务找核心词、同义表达、具体场景词；确认相关后再扩市场。初筛可从几十个高相关词开始，不设「每种语言约 300」硬指标。
+2. 每个词都要能回答：搜这个词的人进入我们计划做的页面，能不能直接得到他想要的结果？不能 → 移到相邻机会或排除记录，不能因词里有同类行业词就硬套。
+3. 市场（只保留主要发达市场）：US、UK、CA、AU、DE、FR、ES、IT、NL、JP、KR。各国用当地语言查 Google 月搜索量。英语 en.txt 共用四英语市场；de/fr/es/it/nl/ja/ko 各自本地说法扩词。
+4. <strong>SERP 规则（2026-10-24 改）</strong>：
+   - <strong>核心需求词</strong>：无论月搜高低，都查实际搜索结果（确认意图、直接竞品、预期功能）。低量只影响 SEO 优先级，不能成为「不理解这个需求」的理由。
+   - <strong>外围扩展词</strong>：再用「该市场月搜 &gt; 200」控制调查成本；≤200 只记量。
+5. <strong>出海筛选（标配）</strong>：即使月搜&gt;200，若该词是「只有本地成交才能变现」的当地服务需求，也直接跳过 SERP，只记量并标注「本地服务跳过」。（保留找软件/系统/SaaS 的词。）
+6. <strong>搜索量记录</strong>：分清「返回正数 / 供应商返回 0 / 未返回 / 未查询」。没有查到数值，不能写成「未找到≤200」。</p>
+<p>【第三步：研究竞争格局】
+- <strong>按用户任务分组</strong>，再比较不同国家表现。同一任务的多种搜索表达合成一个需求组，不要「每个市场×关键词各写一套赛道结论」。
+- 用该国 Google 看前十；域名注册年龄保留为证据：<strong>近1年或近18个月≥2个、近18个月1个</strong> 仅标为观察线索（「样本中有年轻域名入榜，值得继续查」），<strong>不得直接升级为「新手友好／容易做」</strong>。还要看排名页满足什么需求、功能特点、有无可比小站、我们能否交付。DR 仅参考。样本不足完整前十时，必须写明样本条数，不得下满额结论。
+- 意图是否对口；该词头部/中小玩家与切入点。
+- 正文、serp.json、公开页必须读同一份<strong>最终判定表</strong>；旧标签可留在原始数据，但不得被后续汇总当最终结论。</p>
+<p>【第四步：投入产出与结论】
+- <strong>首屏三维决策</strong>（先于总分）：①有没有相关需求？②当前切口能否独立收费（待验证／已证明）？③适不适合优先靠 SEO 做站？
+- 总分满分 100 可留作内部筛选记录，放附录；五项评分里若未直接评 SEO 获客可行性，不要用总分冒充 SEO 优先级。
+- 验证指标必须分开：<strong>首付、复用、续费</strong>。月订阅看首付+使用、到续订周期再看续费；按次收费才看「第二单是否再买」。不要把套餐内再用当成再付。
+- 写清最小验证动作与停止条件；记录用时。</p>
+<p>【关键词作战表（2026-10-26 Cavill 定：报告核心=指导做哪些关键词）】
+- 报告顺序：第一行一句话定位 → 大白话结论 3-5 句 → <strong>关键词作战表（放最前面的核心章节）</strong> → 需求证据 → 能否单独收费 → 下一步验证 → 附录评分与用时（开始/结束/总时长）。
+- 扩词必须含头部宽词（如 xx app / xx software / ai xx / xx generator / xx tool 及各国当地说法），不能只查长尾；头部宽词一律进 core.txt 查 SERP。
+- 作战表按用户任务分组，每词一行：关键词｜市场/语言｜月搜量（返回正数/供应商返回0/未返回/未查询）｜竞争难度（数据商 KD，或据 SERP 前十：有无大站/专门工具站/论坛、近 1 年-18 个月新域名数；不满十条注明条数）｜搜索意图｜建议（首页主词／工具落地页／长尾内容页／不做）｜优先级 P0/P1/P2｜理由。
+- 表后必须给：「建站先做哪 3-5 个词、各对应什么页面」清单；「不做的词及原因」；「补查了哪些、仍未拿到数据的词」。
+- 只查 US/UK/CA/AU/DE/FR/ES/IT/NL/JP/KR，各用当地语言；只留工具/App/AI/软件意图，丢掉只能本地上门履约的词。域名年龄只是观察线索，不写「新手友好」。</p>
+<p>【报告结构三层】
+1. 一分钟看懂：研究哪个需求、当前建议、最关键支持/反对理由、哪个未知会改决定、下一步验证。
+2. 判断依据：场景与问题 → 现有解法与痛点 → 需求证据与反证 → 能承接的词与直接竞品 → 最小验证与停止条件。每节先结论再少量证据；每条重要证据说明支持什么、不能证明什么。
+3. 可展开证据与方法：完整国家/词表、剔除词及原因、旧评分修正、域名核验、DNS/重试/计时、SOP 与原始文件。影响决策的限制（如某国数据缺失）须留在正文，细节日志可附录。</p>
+<p>【验收】看完首屏应能说清：谁要什么、我们交付什么、有什么证据、为什么值得或不值得继续、下一步验证什么。说不清就继续改；关键词数量和报告长度不算完成标准。</p>
+<p>serp.py：准备 kw 目录（en.txt/de.txt/…），然后
+  python3 /workspace/research/serp.py <kw目录> &lt;输出目录&gt;
+核心词清单可单独标记，脚本侧逐步支持「核心词无视 200 门槛」；在脚本未改完前，人工保证核心词必做 SERP。</p>
+<p>【交付】报告里只写 https 外链；不要写 /workspace 本机路径。证据文件打进同名 zip，附件发 zip，并附公开网页链接。每个核心结论要有可打开的证据入口。</p>
+<h2 id="2026-10-27-report-format-v3md">2026-10-27 深挖流程更新（采纳哥飞顾问建议，报告格式见 report-format-v3.md）</h2>
+<ol>
+<li>开工卡：先收需求发掘专员的「初筛→深挖卡」（模板 handoff-card-template.md）。缺用户任务、核心词、付费证据类型任一项则退回；其它字段可写未取得。</li>
+<li>管线顺序：需求翻译 → 批量预筛（量/CPC/competition）→ 关键词难度（KD 无数据源，写未取得）→ 搜索量核实（规划师口径；12月趋势取不到写未取得）→ SERP 解密（十席+最弱占位）→ 域名概况（DR/RDAP；流量/出词无接口则写未取得或引公开估算并注明来源）→（可选）估值与 Stripe 引荐（目前无数据源，跳过）→ 一行结论 + 拒绝什么。额度用尽就停，不编。</li>
+<li>词族分析必做：父词 vs 拉量内页词；首页只绑最纯商业词。</li>
+<li>主词红海禁止硬刚，必须给替代尾词对比表。</li>
+<li>阈值 KD 0–29、KGR&lt;0.25、CPC&lt;$0.1、链接预算为社群经验值，一律标「待项目复核」，不当硬标准打分。KGR 需 allintitle 结果数，serp.py/PXAny 不提供，标未取得。</li>
+<li>验收节点天数不编；老站内页仅在主题对口时建议；AI 品类保留压力测试。</li>
+</ol></section><section id="files"><h2 class="sec">证据文件（原始数据）</h2><ul><li><a href="kw/adjacent.txt">kw/adjacent.txt</a> (0 KB)</li><li><a href="kw/core.txt">kw/core.txt</a> (2 KB)</li><li><a href="kw/de.txt">kw/de.txt</a> (1 KB)</li><li><a href="kw/en.txt">kw/en.txt</a> (2 KB)</li><li><a href="kw/es.txt">kw/es.txt</a> (1 KB)</li><li><a href="kw/fr.txt">kw/fr.txt</a> (2 KB)</li><li><a href="kw/it.txt">kw/it.txt</a> (1 KB)</li><li><a href="kw/ja.txt">kw/ja.txt</a> (2 KB)</li><li><a href="kw/ko.txt">kw/ko.txt</a> (1 KB)</li><li><a href="kw/nl.txt">kw/nl.txt</a> (1 KB)</li><li><a href="report.md">report.md</a> (33 KB)</li><li><a href="serp.json">serp.json</a> (1314 KB)</li><li><a href="serp.md">serp.md</a> (8 KB)</li><li><a href="sop-criteria.md">sop-criteria.md</a> (1 KB)</li><li><a href="sop-v3.md">sop-v3.md</a> (8 KB)</li><li><a href="timing.txt">timing.txt</a> (0 KB)</li><li><a href="照片转整套PBR贴图-64分.md">照片转整套PBR贴图-64分.md</a> (33 KB)</li></ul></section></div></body></html>
